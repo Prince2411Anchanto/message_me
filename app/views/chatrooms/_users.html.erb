@@ -1,0 +1,9 @@
+<div class="ui fluid raised card chat_box">
+    <div class="content">
+        <div class="ui inverted vertical menu">
+            <% @users.each do |user|%>
+            <%= link_to user.username, user_path(user), class: "item" %>
+            <%end%>
+        </div>
+    </div>
+</div>

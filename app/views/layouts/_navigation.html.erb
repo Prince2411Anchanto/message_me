@@ -1,0 +1,27 @@
+<div class="ui pointing inverted huge menu">
+    <div class= "ui container">
+            <%= link_to "Chat-Room", root_path, class: "item" %>
+        <a class="item">
+            Messages
+        </a>
+        <div class="right menu">
+                <div class="ui dropdown item">
+                    Account <i class="dropdown icon"></i>
+                    <div class="menu">
+                        
+                        <% if logged_in?%>
+                            <%= link_to "Logout", logout_path, class: "item", method: :delete %>
+                        <%else%>
+                            <%= link_to "Sign up", new_user_path, class: "item" %>  
+                            <%= link_to "Login", login_path, class: "item" %>
+                        <%end%>
+                        
+                        
+                    </div>
+                </div>
+                <a class="item">
+                    <button class="ui primary button">Sign-up!</button>
+                </a>
+        </div>
+  </div>
+</div>
